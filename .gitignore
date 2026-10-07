@@ -1,0 +1,21 @@
+# System and local caches
+.DS_Store
+*.DS_Store
+*.tmp
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+
+# Dependencies and build artifacts
+.venv/
+node_modules/
+dist/
+app/node_modules/
+app/dist/
+app/runtime.json
+
+# Local solver builds and test artifacts
+pilot-projects/
+runtime/

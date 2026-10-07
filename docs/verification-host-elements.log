@@ -1,0 +1,44 @@
+
+> step-mesh-studio@0.1.0 test
+> node --test test/*.test.cjs
+
+TAP version 13
+# Subtest: Switching tetra to brick preserves physics and unsupported geometry preserves accepted mesh
+ok 1 - Switching tetra to brick preserves physics and unsupported geometry preserves accepted mesh
+  ---
+  duration_ms: 1021.567125
+  type: 'test'
+  ...
+# Subtest: Real worker: revisions, stale writes, bounded failure, restored mesh, export integrity, save/reopen
+ok 2 - Real worker: revisions, stale writes, bounded failure, restored mesh, export integrity, save/reopen
+  ---
+  duration_ms: 1025.314792
+  type: 'test'
+  ...
+# Subtest: Missing setup exports mesh only, underconstraint fails and incorrect references cannot write
+ok 3 - Missing setup exports mesh only, underconstraint fails and incorrect references cannot write
+  ---
+  duration_ms: 554.727875
+  type: 'test'
+  ...
+# Subtest: Cancellation interrupts the real worker and preserves accepted mesh
+ok 4 - Cancellation interrupts the real worker and preserves accepted mesh
+  ---
+  duration_ms: 315.010542
+  type: 'test'
+  ...
+# Subtest: Agent output renders headings, lists, emphasis, tables and wrapped code safely
+ok 5 - Agent output renders headings, lists, emphasis, tables and wrapped code safely
+  ---
+  duration_ms: 2.983792
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1934.646791

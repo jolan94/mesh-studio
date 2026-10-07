@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-07",
+  "project": "/Users/joe/Library/Application Support/step-mesh-studio/projects/axial-bar-1791349639307.meshstudio",
+  "projectVersion": 8,
+  "recipe": {
+    "globalSize": 4,
+    "algorithm": "delaunay",
+    "elementType": "C3D8",
+    "local": [],
+    "unitsConfirmed": true
+  },
+  "acceptedMesh": {
+    "id": "628484cc-8782-46aa-ad4f-caa159a4037b",
+    "recipe": {
+      "globalSize": 4,
+      "algorithm": "delaunay",
+      "elementType": "C3D8",
+      "local": [],
+      "unitsConfirmed": true
+    },
+    "report": {
+      "elementType": "C3D8",
+      "passed": true,
+      "nodeCount": 176,
+      "elementCount": 90,
+      "minDetJac": 5.555555555555521,
+      "minSICN": 0.9853883347305095,
+      "p05SICN": 0.9853883347305097,
+      "minSJ": 0.9999999999999956,
+      "warnings": [
+        "Structured C3D8: global grid only. Full-integration bricks can be too stiff in bending; verify mesh convergence."
+      ],
+      "worstElements": [
+        227,
+        257,
+        237,
+        267,
+        256,
+        247,
+        276,
+        246,
+        251,
+        277
+      ],
+      "geometryHash": "53b282b9a63c8478d1cac775361b5a94b2a6780a052f3f9633efadb5f63ad883",
+      "solver": "Not run",
+      "maxBoundaryDistanceMm": 0
+    },
+    "meshHash": "b3fdf23981d58cf8a3f0a1bdf364e366acf77fa5fd03f9dc1b688016bdb38021",
+    "time": "2026-10-07T05:09:54.921Z"
+  },
+  "setup": {
+    "material": {
+      "name": "Elastic material",
+      "E": 210000,
+      "nu": 0.3
+    },
+    "supports": [
+      {
+        "id": "fixed-xmin",
+        "faceId": "f1",
+        "dofs": [
+          1,
+          2,
+          3
+        ],
+        "values": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "loads": [
+      {
+        "id": "axial-force",
+        "faceId": "f2",
+        "type": "force",
+        "vector": [
+          750,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "solver": {
+    "passed": true,
+    "solverVersion": "CalculiX 2.23 (static SPOOLES build)",
+    "deckHash": "efed74a57aa3c43a91d86f460f11f609bdd1d444504675d2df3cb205268fe556",
+    "reactionN": [
+      -750.0000000000001,
+      0,
+      0
+    ],
+    "balanceResidualN": [
+      -1.1368683772161603e-13,
+      0,
+      0
+    ],
+    "momentResidualNmm": [
+      1.4210854715202004e-14,
+      0,
+      -3.183231456205249e-12
+    ],
+    "maximumDisplacementMm": 0.001413125347848036,
+    "note": "Linear static execution and balance checked. Solution convergence has not been established.",
+    "version": 8,
+    "meshRevision": "628484cc-8782-46aa-ad4f-caa159a4037b",
+    "folder": "/Users/joe/Library/Application Support/step-mesh-studio/projects/axial-bar-1791349639307.meshstudio/solver-checks/36a408cb-4492-49f7-8d02-9b240598ea64"
+  },
+  "export": {
+    "path": "/Users/joe/Library/Application Support/step-mesh-studio/projects/axial-bar-1791349639307.meshstudio/exports/native-bricks.inp",
+    "sha256": "efed74a57aa3c43a91d86f460f11f609bdd1d444504675d2df3cb205268fe556",
+    "version": 8,
+    "meshRevision": "628484cc-8782-46aa-ad4f-caa159a4037b",
+    "mode": "analysis",
+    "time": "2026-10-07T05:10:29.328Z"
+  },
+  "independentSavedDeckCheck": {
+    "passed": true,
+    "nodeCount": 176,
+    "elementCount": 90,
+    "exteriorSurfaceFaces": 138,
+    "rigidBodyRestraintRank": 6,
+    "elementType": "C3D8",
+    "checks": [
+      "References",
+      "C3D8 sampled Jacobians",
+      "Brick face adjacency",
+      "Exterior pressure faces",
+      "Finite values",
+      "Rigid-body restraint"
+    ]
+  },
+  "messages": [
+    {
+      "role": "user",
+      "text": "Mesh this bar with C3D8 linear bricks at 4 mm global size; use the global structured grid and explicitly clear local refinements. Set E=210000 MPa and nu=0.3, fix the unique xmin face in XYZ, apply a total 750 N force in +X on the unique xmax face. Check with CalculiX and export the exact checked analysis as native-bricks.inp. Use the app tools and report briefly.",
+      "time": "2026-10-07T05:07:47.601Z"
+    },
+    {
+      "role": "system",
+      "text": "Codex did not answer thread/start.",
+      "time": "2026-10-07T05:08:17.605Z"
+    },
+    {
+      "role": "user",
+      "text": "Retry the preparation: C3D8 bricks, 4 mm global grid, local refinements explicitly cleared. E=210000 MPa, nu=0.3. Fix unique xmin XYZ, total 750 N in +X on unique xmax. Check with CalculiX and export native-bricks.inp using the app tools.",
+      "time": "2026-10-07T05:09:34.579Z"
+    },
+    {
+      "role": "assistant",
+      "text": "Completed using app tools.\n\n- C3D8, 4 mm global target, local refinements cleared: **90 bricks, 176 nodes**.\n- E=210000 MPa, \u03bd=0.3; xmin (`f1`) fixed XYZ; xmax (`f2`) loaded +750 N in X.\n- Independent checks and CalculiX 2.23 passed. Reaction: \u2212750 N; maximum displacement: **0.00141313 mm**.\n- Mesh convergence not established.\n\nExport:\n`/Users/joe/Library/Application Support/step-mesh-studio/projects/axial-bar-1791349639307.meshstudio/exports/native-bricks.inp`\n\nSHA-256 matches the solver-checked deck:\n`efed74a57aa3c43a91d86f460f11f609bdd1d444504675d2df3cb205268fe556`",
+      "time": "2026-10-07T05:10:36.362Z"
+    }
+  ],
+  "runtimePython": "/Users/joe/Library/Application Support/step-mesh-studio/runtimes/python-3.12-gmsh-4.15.2/bin/python",
+  "nativeUi": {
+    "brickGridDisplayed": true,
+    "elementFamilySelected": "C3D8 \u00b7 linear brick",
+    "tetAlgorithmDisabledForBricks": true,
+    "localRefineDisabledForBricks": true,
+    "assistantListsBoldAndInlineCodeRendered": true,
+    "brandAlignedLeft": true,
+    "runtimePickerPreservesVenvSymlink": true
+  },
+  "startupObservations": [
+    "Python in Documents stalled during path configuration; app-owned copy of pinned environment imported successfully.",
+    "First Codex thread/start timed out. Retry on the same connection completed the entire workflow."
+  ],
+  "originalProjectRestored": {
+    "project": "/Users/joe/Library/Application Support/step-mesh-studio/projects/holed-plate-1791348042585.meshstudio",
+    "sha256": "e6d6162113e5a6550a4d28cc621006d6651eac92f3f8b39de211f21c0745f0cf",
+    "unchanged": true,
+    "selectedRevision": "bbfe35a1-19e6-4a8d-8b3f-4e4b5db540aa",
+    "brickChoiceDisabledForHoledPlate": true
+  }
+}

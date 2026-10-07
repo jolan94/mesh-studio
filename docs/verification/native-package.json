@@ -1,0 +1,99 @@
+{
+  "project": "/Users/joe/Documents/Documents/Job Hunt/step-mesh-studio/pilot-projects/native-axial-bar.meshstudio",
+  "file": "/Users/joe/Documents/Documents/Job Hunt/step-mesh-studio/pilot-projects/native-verified-axial-bar.inp",
+  "sha256": "b2bb843e95c5af3cbf8bb94b613734d35ba7b74939b84ed44acaab669a3fd2ca",
+  "meshRevision": "8a957e22-077c-48e8-928c-aa858e2b73d5",
+  "nativeDialogExport": true,
+  "integratedChatCompleted": {
+    "role": "assistant",
+    "text": "Completed all requested stages.\n\n- **Mesh:** 933 C3D10 elements, 1,717 nodes; 4 mm global, 2 mm on xmax with 8 mm transition. Minimum SICN: 0.4991; no warnings.\n- **Setup:** E=210000 MPa, \u03bd=0.3; xmin fixed XYZ; xmax total force +750 N in X.\n- **Checks:** Analysis and CalculiX 2.23 balance passed. X reaction: \u2212749.9999644 N; X balance residual: 0.0000356 N.\n- **Maximum displacement:** 0.00141927 mm. Solution convergence was not established.\n\n**Export**\n```text\n/Users/joe/Documents/Documents/Job Hunt/step-mesh-studio/pilot-projects/native-axial-bar.meshstudio/exports/native-prepared.inp\n```\n\n**SHA-256** \u2014 matches the solver-checked deck:\n```text\nb2bb843e95c5af3cbf8bb94b613734d35ba7b74939b84ed44acaab669a3fd2ca\n```",
+    "time": "2026-10-07T04:04:42.267Z"
+  },
+  "setup": {
+    "material": {
+      "name": "Elastic material",
+      "E": 210000,
+      "nu": 0.3
+    },
+    "supports": [
+      {
+        "id": "fixed-xmin",
+        "faceId": "f1",
+        "dofs": [
+          1,
+          2,
+          3
+        ],
+        "values": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "loads": [
+      {
+        "id": "axial-force",
+        "faceId": "f2",
+        "type": "force",
+        "vector": [
+          750,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "recipe": {
+    "globalSize": 4,
+    "algorithm": "delaunay",
+    "local": [
+      {
+        "faceId": "f2",
+        "size": 2,
+        "distance": 8
+      }
+    ],
+    "unitsConfirmed": true
+  },
+  "independentDeckCheck": {
+    "passed": true,
+    "nodeCount": 1717,
+    "elementCount": 933,
+    "exteriorSurfaceFaces": 426,
+    "rigidBodyRestraintRank": 6,
+    "checks": [
+      "References",
+      "C3D10 corner orientation",
+      "Shared quadratic edges",
+      "Exterior pressure faces",
+      "Finite values",
+      "Rigid-body restraint"
+    ]
+  },
+  "solverCheck": {
+    "passed": true,
+    "solverVersion": "CalculiX 2.23 (static SPOOLES build)",
+    "deckHash": "b2bb843e95c5af3cbf8bb94b613734d35ba7b74939b84ed44acaab669a3fd2ca",
+    "reactionN": [
+      -749.9999644000001,
+      -1.7604600005549642e-06,
+      -9.212000003921972e-07
+    ],
+    "balanceResidualN": [
+      3.559999993285601e-05,
+      -1.7604600005549642e-06,
+      -9.212000003921972e-07
+    ],
+    "momentResidualNmm": [
+      9.344630445440316e-06,
+      0.0001857568013292621,
+      -0.00028450548143155174
+    ],
+    "maximumDisplacementMm": 0.0014192674311890134,
+    "note": "Linear static execution and balance checked. Solution convergence has not been established.",
+    "version": 6,
+    "meshRevision": "8a957e22-077c-48e8-928c-aa858e2b73d5",
+    "folder": "/Users/joe/Documents/Documents/Job Hunt/step-mesh-studio/pilot-projects/native-axial-bar.meshstudio/solver-checks/015340c0-e7b5-4123-b049-e4c0963688e6"
+  }
+}

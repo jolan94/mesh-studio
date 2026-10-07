@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "cancelled": true,
+  "disconnected": true,
+  "acceptedRevisionPreserved": "e26117be-203c-4157-aac7-7f80a1463777",
+  "setupPreserved": true,
+  "messages": [
+    {
+      "role": "user",
+      "text": "Inspect the measured geometry and explain the boundary-condition choices in detail. Do not modify or export anything.",
+      "time": "2026-10-07T03:45:56.111Z"
+    },
+    {
+      "role": "system",
+      "text": "Cancelled.",
+      "time": "2026-10-07T03:45:58.540Z"
+    },
+    {
+      "role": "user",
+      "text": "Inspect this measured geometry and describe all the linear-static preparation choices in detail. Do not modify anything.",
+      "time": "2026-10-07T03:45:58.665Z"
+    },
+    {
+      "role": "system",
+      "text": "Codex disconnected. Your project is saved.",
+      "time": "2026-10-07T03:46:00.690Z"
+    }
+  ]
+}

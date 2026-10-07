@@ -1,0 +1,3 @@
+const {contextBridge,ipcRenderer}=require('electron');
+const invoke=name=>(...args)=>ipcRenderer.invoke(name,...args);
+contextBridge.exposeInMainWorld('studio',{state:invoke('state'),scene:invoke('scene'),newProject:invoke('new'),importSTEP:invoke('import'),openProject:invoke('open'),sample:invoke('sample'),action:invoke('action'),chat:invoke('chat'),cancel:invoke('cancel'),exportINP:invoke('export'),connect:invoke('connect'),runtime:invoke('runtime'),reveal:invoke('reveal'),onState:callback=>{const h=(_,s)=>callback(s);ipcRenderer.on('state',h);return()=>ipcRenderer.removeListener('state',h);},onCommand:callback=>ipcRenderer.on('command',(_,c)=>callback(c))});

@@ -1,0 +1,61 @@
+{
+  "name": "step-mesh-studio",
+  "version": "0.1.0",
+  "description": "STEP meshing and CalculiX preparation with integrated Codex",
+  "license": "GPL-2.0-or-later",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.cjs",
+    "test:kernel": "../.venv/bin/python python/test_kernel.py",
+    "pack": "electron-builder --mac dir --arm64 --publish never"
+  },
+  "dependencies": {
+    "three": "0.183.2"
+  },
+  "devDependencies": {
+    "electron": "42.0.0",
+    "electron-builder": "26.0.20",
+    "playwright": "1.63.0"
+  },
+  "build": {
+    "appId": "dev.stepmeshstudio.mac",
+    "productName": "Mesh & Load Studio",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**",
+      "python/**",
+      "ui/**",
+      "node_modules/three/**",
+      "package.json",
+      "NOTICE.md",
+      "assets/icon.png",
+      "!python/**/__pycache__/**"
+    ],
+    "asarUnpack": [
+      "python/**"
+    ],
+    "extraResources": [
+      {
+        "from": "runtime.json",
+        "to": "runtime.json"
+      },
+      {
+        "from": "../fixtures",
+        "to": "fixtures",
+        "filter": [
+          "*.step"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.graphics-design",
+      "identity": null,
+      "icon": "assets/icon.icns"
+    },
+    "electronDist": "node_modules/electron/dist"
+  },
+  "author": "Mesh Studio contributors"
+}

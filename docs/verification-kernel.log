@@ -1,0 +1,61 @@
+test_axial_bar_and_refinement (__main__.NumericalTests.test_axial_bar_and_refinement) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+{"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+{"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_cantilever (__main__.NumericalTests.test_cantilever) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_curved_hole_local_refinement (__main__.NumericalTests.test_curved_hole_local_refinement) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+{"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_curved_pressure_with_zero_net_force (__main__.NumericalTests.test_curved_pressure_with_zero_net_force) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_hxt_algorithm (__main__.NumericalTests.test_hxt_algorithm) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_incomplete_and_conflicting_setup (__main__.NumericalTests.test_incomplete_and_conflicting_setup) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_pressure_and_all_six_boundary_directions (__main__.NumericalTests.test_pressure_and_all_six_boundary_directions) ... {"event": "stage", "stage": "Generating tetrahedra"}
+{"event": "stage", "stage": "Creating quadratic elements"}
+{"event": "stage", "stage": "Checking curved Jacobians and boundary mappings"}
+ok
+test_step_units_and_unsupported_topology (__main__.NumericalTests.test_step_units_and_unsupported_topology) ... [32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /var/folders/vx/3xwy3k6d3sn92ff4h150_z440000gn/T/tmpckgbvtaq/assembly.step(726 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /var/folders/vx/3xwy3k6d3sn92ff4h150_z440000gn/T/tmpckgbvtaq/surface.step(94 ents)  Write  Done[0m
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.385s
+
+OK
