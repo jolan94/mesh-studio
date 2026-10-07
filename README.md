@@ -1,6 +1,6 @@
-# Mesh & Load Studio
+# Mesh Studio
 
-A separate macOS STEP-to-mesh preparation app with **Guided Setup and persistent integrated Codex chat**. Manual controls and agent tools operate on the same versioned project. Implemented 7 October 2026.
+A macOS STEP-to-mesh and FEA preparation workspace with **Guided Setup and persistent integrated Codex chat**. Manual controls and agent tools operate on the same versioned project. Implemented 7 October 2026.
 
 **Option 1:** import/inspect STEP, generate and locally refine Gmsh C3D10 tetrahedra or create structured C3D8 bricks for compatible six-face blocks, select/name CAD faces, define explicit elastic material, translational supports and force/pressure loads, independently check and export CalculiX INP. Save/reopen, immutable accepted mesh revisions, stale-write rejection, failure/cancellation recovery and optional bounded solver balance checks are included.
 
@@ -8,7 +8,7 @@ A separate macOS STEP-to-mesh preparation app with **Guided Setup and persistent
 
 ## Open the app
 
-On this developer Mac, open `app/dist/mac-arm64/Mesh & Load Studio.app`, or run `npm start` from `app`. See [Setup and usage](docs/SETUP.md). Use the original built-in reference parts to explore the workflow. Codex uses the installed signed-in ChatGPT account; no application API key is required.
+On this developer Mac, open `app/dist/mac-arm64/Mesh Studio.app`, or run `npm start` from `app`. See [Setup and usage](docs/SETUP.md). Use the original built-in reference parts to explore the workflow. Codex uses the installed signed-in ChatGPT account; no application API key is required.
 
 The local app uses external pinned Python/Gmsh and project-local CalculiX runtimes. It is not a portable, notarized distribution or proof of support for every STEP file. The supported first-release analysis model is one closed solid, homogeneous isotropic elasticity and linear static force/pressure loading. Unsupported topology is reported explicitly.
 
@@ -31,4 +31,4 @@ See [element families and brick scope](docs/ELEMENTS.md). Chat renders readable 
 - [Integrated agent workflow](docs/AGENT_WORKFLOW.md)
 - [Reuse and accuracy discussion](docs/research/reuse-and-accuracy.md)
 
- The source is GPL-2.0-or-later; see [LICENSE](LICENSE) and [dependency notices](app/NOTICE.md). Repository: [github.com/jolan94/step-mesh-studio](https://github.com/jolan94/step-mesh-studio).
+The source is GPL-2.0-or-later; see [LICENSE](LICENSE) and [dependency notices](app/NOTICE.md). Repository: [github.com/jolan94/mesh-studio](https://github.com/jolan94/mesh-studio).

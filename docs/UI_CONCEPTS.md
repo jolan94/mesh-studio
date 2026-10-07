@@ -1,4 +1,4 @@
-# UI directions for Mesh & Load Studio
+# UI directions for Mesh Studio
 
 Prepared 7 October 2026. User selected **Guided Setup with persistent integrated Codex chat**, with the agent able to drive the complete supported workflow. UI concepts remain illustrative, not solver or meshing evidence.
 
@@ -38,7 +38,7 @@ Best for reproducibility and engineering write-ups. Main risk: it gives less uni
 
 ## Shared interaction rules
 
-- Working name: Mesh & Load Studio. No final branding decision yet.
+- Application name: Mesh Studio.
 - Use readable neutral surfaces, a restrained selection accent and a technical viewport. Color also has labels/symbols: fixed supports, forces, selected CAD region and failed elements remain distinguishable.
 - Offer CAD, Mesh and Overlay display modes; preserve camera during settings edits when feasible. Fit/reset and clipping are discoverable.
 - Explain element family/order and units in the inspector. “Fine” alone is insufficient; expose target sizes and transitions.

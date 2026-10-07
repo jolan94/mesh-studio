@@ -10,7 +10,7 @@ class CodexAgent{
   this.child=spawn(this.runtime.codex,['app-server'],{cwd:this.cwd,env:{...process.env,PATH},stdio:['pipe','pipe','pipe']});
   readline.createInterface({input:this.child.stdout}).on('line',line=>{try{void this.receive(JSON.parse(line));}catch{}});this.child.stderr.on('data',()=>{});
   this.child.on('error',e=>this.fail(e));this.child.on('exit',()=>{this.fail(Error('Codex disconnected. Your project is saved.'));this.onEvent({type:'disconnected'});});
-  await this.call('initialize',{clientInfo:{name:'mesh_load_studio',title:'Mesh & Load Studio',version:'0.1.0'},capabilities:{experimentalApi:true,requestAttestation:false}});this.send({method:'initialized'});
+  await this.call('initialize',{clientInfo:{name:'mesh_studio',title:'Mesh Studio',version:'0.1.0'},capabilities:{experimentalApi:true,requestAttestation:false}});this.send({method:'initialized'});
   const {account}=await this.call('account/read',{refreshToken:false});
   if(account?.type!=='chatgpt'){this.close();throw Error('Sign in with ChatGPT using codex login, then reconnect.');}
   return {plan:account.planType||'ChatGPT'};

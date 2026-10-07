@@ -255,7 +255,7 @@ def export_deck(mesh,setup,destination,mode='analysis'):
     if mode=='analysis' and issues:raise ValueError(' '.join(issues))
     element_type=mesh.get('elementType','C3D10')
     if element_type not in ('C3D10','C3D8'):raise ValueError('Unsupported export element family.')
-    lines=[f'** Mesh & Load Studio: mm, N, MPa. {element_type}.','*NODE']
+    lines=[f'** Mesh Studio: mm, N, MPa. {element_type}.','*NODE']
     lines += [', '.join([str(n[0]),*(ccx_number(x) for x in n[1:])]) for n in mesh['nodes']]
     lines+=[f'*ELEMENT, TYPE={element_type}, ELSET=SOLID']+[', '.join(map(str,e)) for e in mesh['elements']]
     lines+=['*NSET, NSET=ALLNODES']

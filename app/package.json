@@ -1,5 +1,5 @@
 {
-  "name": "step-mesh-studio",
+  "name": "mesh-studio",
   "version": "0.1.0",
   "description": "STEP meshing and CalculiX preparation with integrated Codex",
   "license": "GPL-2.0-or-later",
@@ -19,8 +19,8 @@
     "playwright": "1.63.0"
   },
   "build": {
-    "appId": "dev.stepmeshstudio.mac",
-    "productName": "Mesh & Load Studio",
+    "appId": "dev.meshstudio.mac",
+    "productName": "Mesh Studio",
     "directories": {
       "output": "dist"
     },

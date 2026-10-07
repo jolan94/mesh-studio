@@ -1,6 +1,6 @@
-# Running Mesh & Load Studio
+# Running Mesh Studio
 
-The current build is a local Apple Silicon pilot. Open `app/dist/mac-arm64/Mesh & Load Studio.app` on this Mac, or run `npm start` from `app`. Development uses the isolated project Python environment. The packaged app on this Mac uses a copy of that pinned environment at `~/Library/Application Support/step-mesh-studio/runtimes/python-3.12-gmsh-4.15.2/bin/python`, plus the project-local CalculiX executable and your installed Codex. Runtime settings let you choose each executable. Chat requires an existing ChatGPT login in Codex; manual preparation remains available when chat is disconnected.
+The current build is a local Apple Silicon pilot. Open `app/dist/mac-arm64/Mesh Studio.app` on this Mac, or run `npm start` from `app`. Development uses the isolated project Python environment. The packaged app on this Mac uses a copy of that pinned environment at `~/Library/Application Support/step-mesh-studio/runtimes/python-3.12-gmsh-4.15.2/bin/python`, plus the project-local CalculiX executable and your installed Codex. Runtime settings let you choose each executable. Chat requires an existing ChatGPT login in Codex; manual preparation remains available when chat is disconnected.
 
 A project is a folder containing immutable `source.step`, imported geometry, accepted mesh revisions, setup, conversation, exports and optional solver-check artifacts. Changes autosave to `project.json`. Use Open project to reopen this folder. Do not edit accepted geometry/mesh files directly: hashes are verified before using them.
 

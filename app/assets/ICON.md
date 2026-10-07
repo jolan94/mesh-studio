@@ -1,4 +1,4 @@
-# Mesh & Load Studio icon
+# Mesh Studio icon
 
 Generated with the built-in image generation tool on 7 October 2026. `icon-generated.png` preserves the original generated artwork. `scripts/icon.py` only resizes and packages that artwork into the 1024 px PNG and multi-resolution ICNS used by the app.
 
