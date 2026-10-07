@@ -31,4 +31,4 @@ See [element families and brick scope](docs/ELEMENTS.md). Chat renders readable 
 - [Integrated agent workflow](docs/AGENT_WORKFLOW.md)
 - [Reuse and accuracy discussion](docs/research/reuse-and-accuracy.md)
 
-The source is GPL-2.0-or-later; see [LICENSE](LICENSE) and [dependency notices](app/NOTICE.md). No remote publishing has been performed.
+ The source is GPL-2.0-or-later; see [LICENSE](LICENSE) and [dependency notices](app/NOTICE.md). Repository: [github.com/jolan94/step-mesh-studio](https://github.com/jolan94/step-mesh-studio).
